@@ -10,4 +10,51 @@ public class Agenda {
     private Long id;
     public Calendar data;
     public String nomePcnt;
+
+    // Construtores
+
+    public Agenda() {
+    }
+
+    public Agenda(Long id, Calendar data, String nomePcnt) {
+        this.id = id;
+        this.data = data;
+        this.nomePcnt = nomePcnt;
+    }
+    //Getters and Setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Calendar getData() {
+        return data;
+    }
+
+    public void setData(Calendar data) {
+        this.data = data;
+    }
+
+    public String getNomePcnt() {
+        return nomePcnt;
+    }
+
+    public void setNomePcnt(String nomePcnt) {
+        this.nomePcnt = nomePcnt;
+    }
+
+    //ToString
+
+    @Override
+    public String toString() {
+        return "Agenda{" +
+                "id=" + id +
+                ", data=" + data +
+                ", nomePcnt='" + nomePcnt + '\'' +
+                '}';
+    }
 }
