@@ -3,7 +3,7 @@ package br.edu.ifsul.cstsi.lpoo_obj5.model;
 import java.util.Calendar;
 import jakarta.persistence.*;
 @Entity(name = "agenda")
-@Table(name = "agendas")
+@Table(name = "agenda")
 public class Agenda {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

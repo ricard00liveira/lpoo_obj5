@@ -11,5 +11,11 @@ public class Consulta {
     public Calendar data;
     public String nomePcnte;
     public String nomeDents;
+    @ManyToOne
+    private Paciente paciente;
+    @ManyToOne
+    private Secretaria secretaria;
+    @OneToOne
+    private Agenda agenda;
 
 }
