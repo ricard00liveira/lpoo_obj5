@@ -2,14 +2,13 @@ package br.edu.ifsul.cstsi.lpoo_obj5.model;
 
 import java.util.Calendar;
 import jakarta.persistence.*;
-@Entity(name = "consulta")
+@Entity
 @Table(name = "consultas")
 public class Consulta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     public Calendar data;
-    public String nomePcnte;
     public String nomeDents;
     @ManyToOne
     private Paciente paciente;
@@ -26,14 +25,12 @@ public class Consulta {
     public Consulta(Long id, Calendar data, String nomePcnte, String nomeDents) {
         this.id = id;
         this.data = data;
-        this.nomePcnte = nomePcnte;
         this.nomeDents = nomeDents;
     }
 
     public Consulta(Long id, Calendar data, String nomePcnte, String nomeDents, Paciente paciente, Secretaria secretaria, Agenda agenda) {
         this.id = id;
         this.data = data;
-        this.nomePcnte = nomePcnte;
         this.nomeDents = nomeDents;
         this.paciente = paciente;
         this.secretaria = secretaria;
@@ -55,14 +52,6 @@ public class Consulta {
 
     public void setData(Calendar data) {
         this.data = data;
-    }
-
-    public String getNomePcnte() {
-        return nomePcnte;
-    }
-
-    public void setNomePcnte(String nomePcnte) {
-        this.nomePcnte = nomePcnte;
     }
 
     public String getNomeDents() {
@@ -104,7 +93,6 @@ public class Consulta {
         return "Consulta{" +
                 "id=" + id +
                 ", data=" + data +
-                ", nomePcnte='" + nomePcnte + '\'' +
                 ", nomeDents='" + nomeDents + '\'' +
                 ", paciente=" + paciente +
                 ", secretaria=" + secretaria +

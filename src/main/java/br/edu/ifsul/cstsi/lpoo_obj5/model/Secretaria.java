@@ -2,7 +2,7 @@ package br.edu.ifsul.cstsi.lpoo_obj5.model;
 import jakarta.persistence.*;
 import java.util.List;
 
-@Entity(name = "secretaria")
+@Entity
 @Table(name = "secretarias")
 public class Secretaria {
     @Id

@@ -2,14 +2,13 @@ package br.edu.ifsul.cstsi.lpoo_obj5.model;
 
 import java.util.Calendar;
 import jakarta.persistence.*;
-@Entity(name = "agenda")
+@Entity
 @Table(name = "agenda")
 public class Agenda {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     public Calendar data;
-    public String nomePcnt;
 
     // Construtores
 
@@ -19,7 +18,6 @@ public class Agenda {
     public Agenda(Long id, Calendar data, String nomePcnt) {
         this.id = id;
         this.data = data;
-        this.nomePcnt = nomePcnt;
     }
     //Getters and Setters
 
@@ -39,14 +37,6 @@ public class Agenda {
         this.data = data;
     }
 
-    public String getNomePcnt() {
-        return nomePcnt;
-    }
-
-    public void setNomePcnt(String nomePcnt) {
-        this.nomePcnt = nomePcnt;
-    }
-
     //ToString
 
     @Override
@@ -54,7 +44,6 @@ public class Agenda {
         return "Agenda{" +
                 "id=" + id +
                 ", data=" + data +
-                ", nomePcnt='" + nomePcnt + '\'' +
                 '}';
     }
 }
